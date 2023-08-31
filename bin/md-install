@@ -361,12 +361,9 @@ hasProductTypeForCommandLineTool=`doesFileContain "$specificationFile" 'com.appl
 #packageTypesForMacOSXPath="$macosxSDKSpecificationsPath/MacOSX Package Types.xcspec"
 #productTypesForMacOSXPath="$macosxSDKSpecificationsPath/MacOSX Product Types.xcspec"
 
-#macosxSDKSpecificationsPath=$macosSdkPlatformPath/Developer/Library/Xcode/PrivatePlugIns
-#packageTypesForMacOSXPath="$macosxSDKSpecificationsPath/IDEOSXSupportCore.ideplugin/Contents/Resources/MacOSX Package Types.xcspec"
-#productTypesForMacOSXPath="$macosxSDKSpecificationsPath/IDEOSXSupportCore.ideplugin/Contents/Resources/MacOSX Product Types.xcspec"
 
-macosxSDKSpecificationsPath="$(cd $macosSdkPlatformPath/../../.. && pwd)/PlugIns/XCBSpecifications.ideplugin/Contents/Resources"
-# echo $macosxSDKSpecificationsPath
+macosxSDKSpecificationsPath="$(cd $macosSdkPlatformPath/../../.. && pwd)/Plug-ins/XCBSpecifications.ideplugin/Contents/Resources"
+echo $macosxSDKSpecificationsPath
 packageTypesForMacOSXPath="$macosxSDKSpecificationsPath/MacOSX Package Types.xcspec"
 productTypesForMacOSXPath="$macosxSDKSpecificationsPath/MacOSX Product Types.xcspec"
 
