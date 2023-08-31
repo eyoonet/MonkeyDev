@@ -347,7 +347,10 @@ addToFileIfMissing "$userBashProfileFile" "^(export)? *PATH=.*(\\\$MonkeyDevPath
 iosSdkPlatformPath=`getSdkProperty iphoneos PlatformPath`
 macosSdkPlatformPath=`getSdkProperty macosx PlatformPath`
 
-specificationFile=$(cd $iosSdkPlatformPath/../../.. && pwd)/PlugIns/IDEiOSSupportCore.ideplugin/Contents/Resources/Embedded-Device.xcspec
+#specificationFile=$(cd $iosSdkPlatformPath/../../.. && pwd)/PlugIns/IDEiOSSupportCore.ideplugin/Contents/Resources/Embedded-Device.xcspec
+specificationFile =“/Applications/Xcode.app/Contents/Developer/Library/Xcode/Plug-ins/XCBSpecifications.ideplugin/Contents/Resources/Embedded-Device.xcspec”
+
+
 
 requireFile "$specificationFile" false
 
@@ -362,7 +365,7 @@ hasProductTypeForCommandLineTool=`doesFileContain "$specificationFile" 'com.appl
 #productTypesForMacOSXPath="$macosxSDKSpecificationsPath/MacOSX Product Types.xcspec"
 
 
-macosxSDKSpecificationsPath="$(cd $macosSdkPlatformPath/../../.. && pwd)/Plug-ins/XCBSpecifications.ideplugin/Contents/Resources"
+macosxSDKSpecificationsPath="/Applications/Xcode.app/Contents/Developer/Library/Xcode/Plug-ins/XCBSpecifications.ideplugin/Contents/Resources"
 echo $macosxSDKSpecificationsPath
 packageTypesForMacOSXPath="$macosxSDKSpecificationsPath/MacOSX Package Types.xcspec"
 productTypesForMacOSXPath="$macosxSDKSpecificationsPath/MacOSX Product Types.xcspec"
