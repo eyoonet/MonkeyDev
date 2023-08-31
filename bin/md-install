@@ -355,7 +355,7 @@ specificationFile="/Applications/Xcode.app/Contents/Developer/Library/Xcode/Plug
 requireFile "$specificationFile" false
 
 #backup
-requireBackup "$specificationFile"
+#requireBackup "$specificationFile"
 
 hasPackageTypeForCommandLineTool=`doesFileContain "$specificationFile" 'com.apple.package-type.mach-o-executable'`
 hasProductTypeForCommandLineTool=`doesFileContain "$specificationFile" 'com.apple.product-type.tool'`
